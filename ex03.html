@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product List</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fff;
+    }
+
+    .menu {
+      display: flex;
+      background: linear-gradient(to bottom, lightblue, blue);
+    }
+    .menu a {
+      flex: 1;
+      padding: 12px 0;
+      text-align: center;
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      border-right: 1px solid rgba(255, 255, 255, 0.4);
+    }
+    .menu a:last-child { border-right: none; }
+    .menu a i { margin-right: 6px; }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+
+    /*  Heading and search box */
+    h1 {
+      text-align: center;
+      font-size: 44px;
+      color: blue;
+      text-shadow: 2px 2px 3px lightblue;
+      margin: 24px 0 16px;
+    }
+    .search {
+      display: block;
+      width: 100%;
+      padding: 8px 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+    }
+    .product {
+      position: relative;
+      border: 1px solid darkblue;
+      border-radius: 8px;
+      padding: 12px 10px 10px;
+      overflow: hidden;
+    }
+    .product .close {
+      position: absolute;
+      top: 6px;
+      right: 10px;
+      color: blue;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    .product img {
+      display: block;
+      width: 100%;
+      margin-top: 12px;
+      transition: transform 0.3s;
+    }
+    .product img:hover { transform: scale(0.8); }
+    .product h3 { margin: 8px 0 4px; font-size: 14px; }
+    .product p { margin: 0; font-size: 12px; color: #333; }
+
+    footer {
+      margin-top: 24px;
+      padding: 18px 0;
+      text-align: center;
+      color: #fff;
+      font-size: 13px;
+      background: linear-gradient(to bottom, blue, white);
+    }
+
+    @media (max-width: 900px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 560px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+  </style>
+</head>
+<body>
+  <nav class="menu">
+    <a href="#"><i class="fa-solid fa-house"></i>Home</a>
+    <a href="#"><i class="fa-solid fa-mobile-screen"></i>Mobile</a>
+    <a href="#"><i class="fa-solid fa-tablet-screen-button"></i>Tablet</a>
+    <a href="#"><i class="fa-solid fa-desktop"></i>Desktop</a>
+  </nav>
+
+  <div class="container">
+    <h1>PRODUCT LIST</h1>
+    <input class="search" type="text" placeholder="Enter product name...">
+
+    <div class="grid">
+      <div class="product">
+        <i class="fa-solid fa-xmark close"></i>
+        <img src="./p1.png">
+        <h3>iPhone 13</h3>
+        <p>24,000,000 VND</p>
+      </div>
+      <div class="product">
+        <i class="fa-solid fa-xmark close"></i>
+        <img src="./p2.png">
+        <h3>Galaxy Z Fold</h3>
+        <p>41,990,000 VND</p>
+      </div>
+      <div class="product">
+        <i class="fa-solid fa-xmark close"></i>
+        <img src="./p3.png">
+        <h3>Galaxy Z Flip</h3>
+        <p>22,990,000 VND</p>
+      </div>
+      <div class="product">
+        <i class="fa-solid fa-xmark close"></i>
+        <img src="./p4.png">
+        <h3>iPhone 14 Pro</h3>
+        <p>28,990,000 VND</p>
+      </div>
+      <div class="product">
+        <i class="fa-solid fa-xmark close"></i>
+        <img src="./p5.png">
+        <h3>iPhone SE</h3>
+        <p>12,990,000 VND</p>
+      </div>
+      <div class="product">
+        <i class="fa-solid fa-xmark close"></i>
+        <img src="./p6.png">
+        <h3>Galaxy Tab S7</h3>
+        <p>16,990,000 VND</p>
+      </div>
+      <div class="product">
+        <i class="fa-solid fa-xmark close"></i>
+        <img src="./p7.png">
+        <h3>iPad Pro</h3>
+        <p>27,990,000 VND</p>
+      </div>
+      <div class="product">
+        <i class="fa-solid fa-xmark close"></i>
+        <img src="./p8.png">
+        <h3>iPhone 13 Pro</h3>
+        <p>32,990,000 VND</p>
+      </div>
+      <div class="product">
+        <i class="fa-solid fa-xmark close"></i>
+        <img src="./p9.png">
+        <h3>Galaxy S23</h3>
+        <p>24,990,000 VND</p>
+      </div>
+      <div class="product">
+        <i class="fa-solid fa-xmark close"></i>
+        <img src="./p10">
+        <h3>Pixel 8</h3>
+        <p>18,990,000 VND</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>&copy; 2026 Product Store. All rights reserved.</footer>
+</body>
+</html>
